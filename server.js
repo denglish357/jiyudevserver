@@ -15,6 +15,14 @@ app.get('/', function (req, res) {
     res.send('Hello World!');
 });
 
+
+
+
+const {router} = require('./router')
+
+
+router(app)
+
 app.listen(5000, function () {
     console.log('Example app listening on port 5000!');
 });
