@@ -1,10 +1,14 @@
-var express = require('express');
-var app = express();
-var cors = require('cors');
-var mongodb = require('mongodb');
-var bodyParser = require('body-parser');
-
+const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+const mongodb = require('mongodb')
+const {
+    getClient
+} = require('./db')
+const app = express()
+app.use(bodyParser.json())
 app.use(cors())
+const objectId = require('mongodb').ObjectId;
 
 app.use(bodyParser.json())
 app.get('/', function (req, res) {
