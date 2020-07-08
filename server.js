@@ -16,8 +16,6 @@ app.get('/', function (req, res) {
 });
 
 
-
-
 const {router} = require('./router')
 
 
